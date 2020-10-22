@@ -15,6 +15,13 @@ spring:
           uri: lb://CLOUD-PAYMENT-SERVICE     #匹配后提供服务的路由地址
           predicates:
             - Path=/payments/**               # 断言，路径相匹配的进行路由
+            #- After=2020-10-22T21:08:01.217+08:00[Asia/Shanghai]
+            #- Between=2020-10-22T20:08:01.217+08:00[Asia/Shanghai],2020-10-22T21:08:01.217+08:00[Asia/Shanghai]
+            #- Cookie=username,cr
+            #- Header=X-Request-Id, \d+  # 请求头要有X-Request-Id属性并且值为整数的正则表达式
+            #- Host=cr.com
+            #- Method=GET
+            #- Query=username, \d+
 
 eureka:
   instance:
